@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.webp" alt="Logo">
+        </div>
+        <h1>Result Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#admin-panel">Admin Panel</a></li>
+                <li><a href="#student-dashboard">Student Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h2>Welcome!</h2>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <!-- Admin Panel Section -->
+    <section id="admin-panel">
+        <h2><u>Admin Panel</u></h2>
+        <div class="admin-section">
+            <h3>Upload Marks</h3>
+            <form>
+                <div class="form-group">
+                    <label for="attendance">Upload Attendance Marks:</label>
+                    <input type="file" id="attendance" accept=".xlsx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="projectReview">Upload Project Review Marks:</label>
+                    <input type="file" id="projectReview" accept=".xlsx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="assessment">Upload Assessment Marks:</label>
+                    <input type="file" id="assessment" accept=".xlsx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="projectSubmission">Upload Project Submission Marks:</label>
+                    <input type="file" id="projectSubmission" accept=".xlsx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="linkedinPost">Upload LinkedIn Post Marks:</label>
+                    <input type="file" id="linkedinPost" accept=".xlsx">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Student Dashboard Section -->
+    <section id="student-dashboard">
+        <h2><u>Student Dashboard</u></h2>
+        <form id="student-search">
+            <label for="studentId">Enter Student ID:</label>
+            <input type="text" id="studentId" placeholder="Enter your ID">
+            <button type="button" onclick="searchResults()">Search</button>
+        </form>
+        <div id="result-display">
+            <h3>Student Results</h3>
+            <p>Attendance Marks: <span id="attendanceResult">N/A</span></p>
+            <p>Project Review Marks: <span id="projectReviewResult">N/A</span></p>
+            <p>Assessment Marks: <span id="assessmentResult">N/A</span></p>
+            <p>Project Submission Marks: <span id="projectSubmissionResult">N/A</span></p>
+            <p>LinkedIn Post Marks: <span id="linkedinPostResult">N/A</span></p>
+        </div>
+    </section>
+ 
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-3 pt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold text-light">Information</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Contact Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Terms Of Use</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">FAQs</a>
+          </p>
+
+        </div>
+      
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold text-light">Stay Connected</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                      
+                        <!-- Facebook -->
+                        <p>
+                      <a class="fb-ic">
+                        <i class="fa fa-facebook-official white-text mr-4 text-light"><span class="icon_name">Facebook</span></i>
+                      </a>
+                      </p>
+                      <!-- Twitter -->
+                      <p>
+                      <a class="tw-ic">
+                        <i class="fa fa-twitter white-text mr-4 text-light"><span class="icon_name">Twitter</span></i>
+                      </a>
+                      </p>
+                      <!--Linkedin -->
+                      <p>
+                      <a class="li-ic">
+                        <i class="fa fa-linkedin white-text mr-4 text-light"><span class="icon_name">Linkedin</span></i>
+                      </a>
+                      </p>
+                      <!--Instagram-->
+                      <p></p>
+                      <a class="ins-ic">
+                        <i class="fa fa-instagram white-text text-light"><span class="icon_name">Instagram </span></i>
+                      </a>
+                      </p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3 text-light">@
+      <a class="dark-grey-text" href="#"> © 2024 Job Portal made by Yukta Rani </a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
